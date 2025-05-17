@@ -50,7 +50,7 @@ gh repo clone VIbanichuka/TokenGenerator
 ```
 ## Sensitive Data Disclaimer
 
-This project **intentionally excludes sensitive credentials and configuration data** for security reasons. The following values have been removed or replaced with placeholders:
+This project **intentionally excludes sensitive credentials and configuration data** for security reasons. The following values have been removed and replaced with placeholders:
 
 - **Database connection string** (`appsettings.json`):
   ```json

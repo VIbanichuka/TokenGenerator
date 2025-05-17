@@ -1,6 +1,6 @@
 # TokenGenerator Api
 
-A secure .NET 9.0 Web API for user registration, authentication, email verification, and 6-digit alphanumeric access token generation and validation.
+A secure .NET 8.0 Web API for user registration, authentication, email verification, and 6-digit alphanumeric access token generation and validation.
 
 
 - **Presentation layer** — [**TokenGenerator.Api**](src/TokenGenerator.Api/)  

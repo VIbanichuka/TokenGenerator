@@ -1,6 +1,6 @@
 # TokenGenerator Api
 
-A secure .NET 9.0 Web API for user registration, authentication, email verification, and 6-digit alphanumeric access token generation and validation.
+A secure .NET 8.0 Web API for user registration, authentication, email verification, and 6-digit alphanumeric access token generation and validation.
 
 
 - **Presentation layer** — [**TokenGenerator.Api**](src/TokenGenerator.Api/)  
@@ -47,24 +47,21 @@ A secure .NET 9.0 Web API for user registration, authentication, email verificat
 
 ```bash
 gh repo clone VIbanichuka/TokenGenerator
-
-
+```
 ## Sensitive Data Disclaimer
 
-This project **intentionally excludes sensitive credentials and configuration data** for security reasons. The following values have been removed or replaced with placeholders:
+This project **intentionally excludes sensitive credentials and configuration data** for security reasons. The following values have been removed and replaced with placeholders:
 
 - **Database connection string** (`appsettings.json`):
   ```json
   "ConnectionStrings": {
     "TokenGeneratorConnectionString": "server=INSERT YOUR SERVER INSTANCE;database=TokenGeneratorDB;Trusted_Connection=True;TrustServerCertificate=True"
   }
-
-Email configuration (MailKitEmailService.cs):
-
-Sender email and password for SMTP authentication:
-
-smtp.AuthenticateAsync("INSERT YOUR EMAIL", "INSERT YOUR APP PASSWORD");
-
-MailboxAddress.Parse(message.From ?? "INSERT YOUR EMAIL")
-
-Please ensure you replace these placeholder values with your actual credentials or via User Secrets for development, and environment variables or a secure secrets store for production use.
+  ```
+  
+ - **Email configuration** (`MailKitEmailService.cs`): Sender email and password for SMTP authentication:
+    ```
+    smtp.AuthenticateAsync("INSERT YOUR EMAIL", "INSERT YOUR APP PASSWORD");
+    MailboxAddress.Parse(message.From ?? "INSERT YOUR EMAIL")
+    ```
+    Please ensure you replace these placeholder values with your actual credentials or via User Secrets for development, and environment variables or a secure secrets store for production use.

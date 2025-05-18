@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
+using TokenGenerator.Api.Middleware;
 using TokenGenerator.Application.Implementations.Services;
 using TokenGenerator.Application.Interfaces.IRepositories;
 using TokenGenerator.Application.Interfaces.IServices;
@@ -74,6 +75,8 @@ builder.Services.AddAuthentication(options =>
 });
 
 var app = builder.Build();
+
+app.UseMiddleware<ErrorHandlingMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
